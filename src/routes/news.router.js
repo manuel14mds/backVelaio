@@ -1,10 +1,10 @@
 import { Router } from 'express'
 import ArticleManager from '../managers/article.manager.js'
+import config from '../../config/config.js'
 
 
 const router = Router()
-const apikey = '391e946c71f340afbc167a64e83bb2ef'
-const urlAll = `https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=${apikey}`
+const urlAll = `https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=${config.app.newsKey}`
 
 const articleService = new ArticleManager()
 

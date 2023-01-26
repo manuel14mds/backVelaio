@@ -2,7 +2,7 @@ import Router from 'express'
 import config from '../../config/config.js'
 
 const router = Router()
-const url = `https://api.openweathermap.org/data/2.5/weather?id=3687925&appid=${config.app.weatherKey}`
+const url = `https://api.openweathermap.org/data/2.5/weather?id=3687925&appid=${config.app.weatherKey}&units=metric`
 
 router.get('/', (req, res) => {
     try {

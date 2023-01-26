@@ -29,7 +29,8 @@ router.post('/login', async (req,res)=>{
 
 router.get('/logout', authUser, async (req,res)=>{
     try {
-        destroyJWT(req.user.token)
+        let result = destroyJWT(req.user.token)
+        console.log(result)
         return res.send({message:'Log-out Successfully!'})
     } catch (error) {
         return res.status(500).send({error:'server error'})
