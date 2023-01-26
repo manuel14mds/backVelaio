@@ -35,8 +35,8 @@ const destroyJWT = (token)=>{
     } catch (error) {
         return true
     }
-
 }
+
 export {
     encodeJWT, 
     decodeJWT,
